@@ -4,49 +4,68 @@ import 'package:umma_app/utils/size_config.dart';
 import 'package:umma_app/widgets/base_appbar.dart';
 import 'package:umma_app/widgets/notification_bar.dart';
 
+import 'widgets/custom_devider.dart';
+
 class AzkarList extends StatelessWidget {
   final List<Azakr> azakrList;
 
   const AzkarList({Key key, this.azakrList}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    print(azakrList[2].title);
     SizeConfig().init(context);
     double defaultSize = SizeConfig.defaultSize;
     return Scaffold(
       appBar: BaseAppBar(
         defaultSize: defaultSize,
-        title: 'Азакры',
+        title: 'Азакары',
         appBar: AppBar(),
       ),
       body: Column(
         children: [
           NotificationBar(defaultSize: defaultSize),
           Container(
-            padding: EdgeInsets.only(top: 20),
-            height: SizeConfig.blockSizeVertical * 80,
+            height: SizeConfig.blockSizeVertical * 75,
             child: ListView.builder(
               itemCount: azakrList.length,
               itemBuilder: (BuildContext context, int index) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.symmetric(
-                          vertical: BorderSide(
-                            width: 1,
-                            color: Color(0xFFD1D1D6),
-                          ),
+                    Padding(
+                      padding: EdgeInsets.all(defaultSize * 1.6),
+                      child: Text(
+                        azakrList[index].title,
+                        style: Theme.of(context).textTheme.headline1,
+                      ),
+                    ),
+                    CustomDivider(),
+                    Padding(
+                      padding: EdgeInsets.all(defaultSize * 1.6),
+                      child: Image(
+                        fit: BoxFit.none,
+                        image: AssetImage(
+                          azakrList[index].imgUrl,
                         ),
                       ),
-                      child: Text(azakrList[index].title),
                     ),
-                    Image(
-                      image: AssetImage('assets/images/script.png'),
+                    Padding(
+                      padding: EdgeInsets.all(defaultSize * 1.6),
+                      child: Text(
+                        azakrList[index].text,
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
                     ),
-                    Text(azakrList[index].text),
-                    Text(azakrList[index].translation)
+                    Padding(
+                      padding: EdgeInsets.all(defaultSize * 1.6),
+                      child: Text(
+                        azakrList[index].translation,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText1
+                            .merge(TextStyle(fontStyle: FontStyle.italic)),
+                      ),
+                    ),
+                    CustomDivider(),
                   ],
                 );
               },
@@ -57,3 +76,5 @@ class AzkarList extends StatelessWidget {
     );
   }
 }
+
+

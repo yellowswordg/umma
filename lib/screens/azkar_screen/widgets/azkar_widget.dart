@@ -16,21 +16,23 @@ class Azkar extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (_) => AzkarList(
-                    azakrList: azakrs[index].azakrList,
-                  ))),
+        context,
+        MaterialPageRoute(
+          builder: (_) => AzkarList(
+            azakrList: azakrs[index].azakrList,
+          ),
+        ),
+      ),
       child: Stack(
         fit: StackFit.loose,
         alignment: Alignment.bottomLeft,
         children: [
           Container(
             margin: EdgeInsets.symmetric(
-                horizontal: defaultSize * 2, vertical: defaultSize * 1),
+                horizontal: defaultSize * 2, vertical: defaultSize * 1.6),
             alignment: Alignment.bottomLeft,
             width: SizeConfig.blockSizeHorizontal * 90,
-            height: SizeConfig.blockSizeVertical * 21,
+            height: SizeConfig.blockSizeVertical * 18.5,
             decoration: (BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
@@ -46,27 +48,26 @@ class Azkar extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextHolder(
-                  title: azakrs[index].title,
-                  color: Colors.white,
-                  fontSize: SizeConfig.defaultSize * 2.3,
+                Text(
+                  '${azakrs[index].title}',
+                  style: Theme.of(context).textTheme.headline2,
                 ),
                 SizedBox(
-                  height: SizeConfig.defaultSize * 1,
+                  height: SizeConfig.defaultSize,
                 ),
                 Row(
                   children: [
-                    TextHolder(
-                        title: 'посмотреть',
-                        color: Theme.of(context).accentColor,
-                        fontSize: SizeConfig.defaultSize * 1.7),
+                    Text(
+                      'посмотреть',
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
                     Padding(
                       padding: EdgeInsets.only(
                           top: SizeConfig.defaultSize * 0.35,
                           left: SizeConfig.defaultSize * 0.5),
                       child: Icon(
                         Icons.arrow_forward_ios,
-                        color: Colors.green,
+                        color: Theme.of(context).accentColor,
                         size: SizeConfig.defaultSize * 1.1,
                       ),
                     )
@@ -78,21 +79,5 @@ class Azkar extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class TextHolder extends StatelessWidget {
-  const TextHolder({
-    Key key,
-    this.title,
-    this.color,
-    this.fontSize,
-  }) : super(key: key);
-  final String title;
-  final Color color;
-  final double fontSize;
-  @override
-  Widget build(BuildContext context) {
-    return Text(title, style: TextStyle(color: color, fontSize: fontSize));
   }
 }

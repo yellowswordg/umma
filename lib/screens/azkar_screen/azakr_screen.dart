@@ -3,7 +3,6 @@ import 'package:umma_app/utils/size_config.dart';
 import 'package:umma_app/data/data.dart';
 import 'package:umma_app/widgets/base_appbar.dart';
 import 'package:umma_app/widgets/notification_bar.dart';
-import 'package:umma_app/widgets/time_picker.dart';
 
 import 'widgets/azkar_widget.dart';
 
@@ -19,40 +18,9 @@ class _AzakrScreenState extends State<AzakrScreen> {
     SizeConfig().init(context);
     double defaultSize = SizeConfig.defaultSize;
     return Scaffold(
-      // appBar: AppBar(
-      //   leading: IconButton(
-      //     icon: Icon(
-      //       Icons.arrow_back_ios,
-      //       color: Theme.of(context).accentColor,
-      //       size: defaultSize * 2,
-      //     ),
-      //     onPressed: () {},
-      //   ),
-      //   actions: [
-      //     IconButton(
-      //       icon: Icon(
-      //         Icons.search,
-      //         size: defaultSize * 2.7,
-      //         color: Theme.of(context).accentColor,
-      //       ),
-      //       onPressed: () {},
-      //     )
-      //   ],
-      //   backgroundColor: Colors.white,
-      //   elevation: 0,
-      //   centerTitle: true,
-      //   title: Text(
-      //     'Азакры',
-      //     style: TextStyle(
-      //       color: Colors.black,
-      //       fontSize: defaultSize * 1.7,
-      //       fontWeight: FontWeight.w700,
-      //     ),
-      //   ),
-      // ),
       appBar: BaseAppBar(
         defaultSize: defaultSize,
-        title: 'Азакры',
+        title: 'Азакары',
         appBar: AppBar(),
       ),
       body: Column(
@@ -68,7 +36,7 @@ class _AzakrScreenState extends State<AzakrScreen> {
                 return Azkar(index: index, defaultSize: defaultSize);
               },
             ),
-          )
+          ),
         ],
       ),
     );

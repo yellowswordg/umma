@@ -27,7 +27,7 @@ class _TimePickerState extends State<TimePicker> {
             children: [
               SvgPicture.asset(
                 'assets/icons/location.svg',
-                height: widget.defaultSize * 1.5,
+                height: widget.defaultSize * 2,
                 // width: defaultSize * 1.4,
               ),
               SizedBox(
@@ -57,18 +57,19 @@ class _TimePickerState extends State<TimePicker> {
                       ? BoxDecoration(
                           border:
                               Border.all(color: Theme.of(context).accentColor),
-                          borderRadius: BorderRadius.all(Radius.circular(15)))
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                        )
                       : null,
                   child: Padding(
                     padding: EdgeInsets.symmetric(
-                        // vertical: widget.defaultSize * 0.1,
-                        horizontal: widget.defaultSize * 0.5),
+                      horizontal: widget.defaultSize * 0.5,
+                    ),
                     child: Text(
                       times[index],
                       style: TextStyle(
                         color: index == selected
                             ? Theme.of(context).accentColor
-                            : Colors.black,
+                            : Color(0xFF052B32),
                         fontSize: widget.defaultSize * 1.2,
                         fontWeight: FontWeight.w400,
                       ),
@@ -79,8 +80,8 @@ class _TimePickerState extends State<TimePicker> {
             ),
           ),
           SvgPicture.asset(
-            'assets/icons/location.svg',
-            height: widget.defaultSize * 1.5,
+            'assets/icons/notification.svg',
+            height: widget.defaultSize * 2,
             // width: defaultSize * 1.4,
           ),
         ],

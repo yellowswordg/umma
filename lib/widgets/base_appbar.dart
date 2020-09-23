@@ -14,11 +14,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Theme.of(context).appBarTheme.color,
       title: Text(
         '$title',
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: defaultSize * 1.7,
-          fontWeight: FontWeight.w700,
-        ),
+        style: Theme.of(context).textTheme.headline3,
       ),
       centerTitle: true,
       elevation: 0,
@@ -27,7 +23,7 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: Icon(
             Icons.search,
             size: defaultSize * 2.7,
-            color: Theme.of(context).accentColor,
+            color: Colors.black45,
           ),
           onPressed: () {},
         )
