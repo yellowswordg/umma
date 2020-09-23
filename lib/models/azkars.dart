@@ -1,16 +1,13 @@
-import 'package:umma_app/models/azakr.dart';
+import 'package:umma_app/models/azkar.dart';
 
-class Azakrs {
+class Azkars {
   final String title;
   final String imgUrl;
-  final List<Azakr> azakrList;
+  final List<Azkar> azakrList;
 
-  Azakrs({
+  Azkars({
     this.title,
     this.imgUrl,
     this.azakrList,
   });
 }
-
-
-

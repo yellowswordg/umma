@@ -20,7 +20,7 @@ class _AzakrScreenState extends State<AzakrScreen> {
     return Scaffold(
       appBar: BaseAppBar(
         defaultSize: defaultSize,
-        title: 'Азакары',
+        title: 'Азкары',
         appBar: AppBar(),
       ),
       body: Column(

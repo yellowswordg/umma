@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:umma_app/data/data.dart';
-import 'package:umma_app/screens/azkar_list_screen/azkar_list_screen.dart';
+import 'package:umma_app/screens/azkar_list_screen/azkars_list_screen.dart';
 import 'package:umma_app/utils/size_config.dart';
 
 class Azkar extends StatelessWidget {

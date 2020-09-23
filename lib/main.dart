@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:umma_app/screens/azkar_screen/azakr_screen.dart';
-import 'package:umma_app/utils/size_config.dart';
+import 'package:umma_app/screens/azkar_screen/azakar_screen.dart';
 
 void main() {
   runApp(MyApp());

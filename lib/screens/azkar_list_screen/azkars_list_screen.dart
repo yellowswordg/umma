@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:umma_app/models/azakr.dart';
+import 'package:umma_app/models/azkar.dart';
 import 'package:umma_app/utils/size_config.dart';
 import 'package:umma_app/widgets/base_appbar.dart';
 import 'package:umma_app/widgets/notification_bar.dart';
@@ -7,7 +7,7 @@ import 'package:umma_app/widgets/notification_bar.dart';
 import 'widgets/custom_devider.dart';
 
 class AzkarList extends StatelessWidget {
-  final List<Azakr> azakrList;
+  final List<Azkar> azakrList;
 
   const AzkarList({Key key, this.azakrList}) : super(key: key);
   @override
@@ -17,7 +17,7 @@ class AzkarList extends StatelessWidget {
     return Scaffold(
       appBar: BaseAppBar(
         defaultSize: defaultSize,
-        title: 'Азакары',
+        title: 'Азкары',
         appBar: AppBar(),
       ),
       body: Column(
@@ -76,5 +76,3 @@ class AzkarList extends StatelessWidget {
     );
   }
 }
-
-
