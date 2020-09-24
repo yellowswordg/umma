@@ -68,12 +68,12 @@ class Azkar extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: SizeConfig.defaultSize * 0.35,
-                            left: SizeConfig.defaultSize * 0.5),
+                            top: defaultSize * 0.35,
+                            left: defaultSize * 0.5),
                         child: Icon(
                           Icons.arrow_forward_ios,
                           color: Theme.of(context).accentColor,
-                          size: SizeConfig.defaultSize * 1.2,
+                          size: defaultSize * 1.2,
                         ),
                       ),
                     ],
