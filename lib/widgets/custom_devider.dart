@@ -8,7 +8,8 @@ class CustomDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Divider(
-      height: 1,
+      thickness: 1,
+      height: 0,
       color: Color(
         0xFFD1D1D6,
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:umma_app/data/data.dart';
 
 class TimePicker extends StatefulWidget {
@@ -37,7 +37,7 @@ class _TimePickerState extends State<TimePicker> {
                 'Москва',
                 style: TextStyle(
                   fontSize: widget.defaultSize * 1.5,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.bold,
                   color: Theme.of(context).accentColor,
                 ),
               )
@@ -55,15 +55,15 @@ class _TimePickerState extends State<TimePicker> {
                 child: Container(
                   decoration: selected == index
                       ? BoxDecoration(
-                          border:
-                              Border.all(color: Theme.of(context).accentColor),
+                          border: Border.all(
+                              color: Theme.of(context).accentColor, width: 1),
                           borderRadius: BorderRadius.all(Radius.circular(15)),
                         )
                       : null,
                   child: Padding(
                     padding: EdgeInsets.symmetric(
-                      horizontal: widget.defaultSize * 0.5,
-                    ),
+                        horizontal: widget.defaultSize * 0.6,
+                        vertical: widget.defaultSize * 0.2),
                     child: Text(
                       times[index],
                       style: TextStyle(

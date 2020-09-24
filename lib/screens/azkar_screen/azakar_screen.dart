@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:umma_app/utils/size_config.dart';
 import 'package:umma_app/data/data.dart';
 import 'package:umma_app/widgets/base_appbar.dart';
+import 'package:umma_app/widgets/custom_devider.dart';
 import 'package:umma_app/widgets/notification_bar.dart';
 
 import 'widgets/azkar_widget.dart';
@@ -28,12 +29,14 @@ class _AzakrScreenState extends State<AzakrScreen> {
           NotificationBar(defaultSize: defaultSize),
           Expanded(
             child: ListView.separated(
-              separatorBuilder: (BuildContext context, int index) => Divider(
-                thickness: 2,
-              ),
+              separatorBuilder: (BuildContext context, int index) =>
+                  CustomDivider(),
               itemCount: azakrs.length,
               itemBuilder: (context, index) {
-                return Azkar(index: index, defaultSize: defaultSize);
+                return Azkar(
+                  defaultSize: defaultSize,
+                  index: index,
+                );
               },
             ),
           ),

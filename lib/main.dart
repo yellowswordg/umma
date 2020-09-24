@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           color: Colors.white,
         ),
-        accentColor: Color(0xff558B2F),
+        accentColor: Color(0xFF558B2F),
         primaryColor: Colors.white,
         textTheme: GoogleFonts.openSansTextTheme(
           Theme.of(context).textTheme,
         ).copyWith(
+          // This style for headlines in article like texts fontSize 17
           headline1: GoogleFonts.openSans(
             textStyle: TextStyle(
               color: Color(0xFF3D3D3D),
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
+          // This style for headlines for dark backgrounds texts fontSize 17
           headline2: GoogleFonts.openSans(
             textStyle: TextStyle(
               color: Color(0xFFFFFFFF),
@@ -47,7 +49,16 @@ class MyApp extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
+          // This style is used in the body of our app for Text widget
           bodyText1: GoogleFonts.openSans(
+            textStyle: TextStyle(
+                color: Color(0xFF3C3C43),
+                fontSize: 15.0,
+                fontWeight: FontWeight.w400,
+                fontStyle: FontStyle.italic),
+          ),
+          // This style is used in the body of our app for Text widget if we need emphasise
+          bodyText2: GoogleFonts.openSans(
             textStyle: TextStyle(
               color: Color(0xFF3C3C43),
               fontSize: 15.0,

@@ -16,7 +16,7 @@ class NotificationBar extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.symmetric(
           vertical: BorderSide(
-            width: 0.6,
+            width: 1,
             color: Color(0xFFD1D1D6),
           ),
         ),

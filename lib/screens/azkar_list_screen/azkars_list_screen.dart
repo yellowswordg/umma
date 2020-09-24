@@ -4,7 +4,7 @@ import 'package:umma_app/utils/size_config.dart';
 import 'package:umma_app/widgets/base_appbar.dart';
 import 'package:umma_app/widgets/notification_bar.dart';
 
-import 'widgets/custom_devider.dart';
+import '../../widgets/custom_devider.dart';
 
 class AzkarList extends StatelessWidget {
   final List<Azkar> azakrList;
@@ -49,20 +49,17 @@ class AzkarList extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(defaultSize * 1.6),
+                      padding: EdgeInsets.fromLTRB(defaultSize * 1.6, 0,
+                          defaultSize * 1.6, defaultSize * 1.6),
                       child: Text(
                         azakrList[index].text,
-                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(defaultSize * 1.6),
                       child: Text(
                         azakrList[index].translation,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .merge(TextStyle(fontStyle: FontStyle.italic)),
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ),
                     CustomDivider(),
