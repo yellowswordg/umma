@@ -14,7 +14,9 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Theme.of(context).appBarTheme.color,
       title: Text(
         '$title',
-        style: Theme.of(context).textTheme.headline3,
+        style: Theme.of(context).textTheme.headline3.merge(
+              TextStyle(fontSize: defaultSize * 1.7),
+            ),
       ),
       centerTitle: true,
       elevation: 0,
@@ -22,17 +24,20 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: Icon(
             Icons.search,
-            size: defaultSize * 2.7,
+            size: 27,
             color: Colors.black45,
           ),
           onPressed: () {},
-        )
+        ),
+        // SizedBox(
+        //   width: defaultSize,
+        // )
       ],
       leading: IconButton(
         icon: Icon(
           Icons.arrow_back_ios,
           color: Theme.of(context).accentColor,
-          size: defaultSize * 2,
+          size: 20,
         ),
         onPressed: () {
           Navigator.pop(context);

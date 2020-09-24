@@ -51,7 +51,9 @@ class Azkar extends StatelessWidget {
                 children: [
                   Text(
                     '${azakrs[index].title}',
-                    style: Theme.of(context).textTheme.headline2,
+                    style: Theme.of(context).textTheme.headline2.merge(
+                          TextStyle(fontSize: defaultSize * 1.7),
+                        ),
                   ),
                   SizedBox(
                     height: defaultSize * 0.4,
@@ -60,7 +62,9 @@ class Azkar extends StatelessWidget {
                     children: [
                       Text(
                         'Посмотреть',
-                        style: Theme.of(context).textTheme.subtitle1,
+                        style: Theme.of(context).textTheme.subtitle1.merge(
+                              TextStyle(fontSize: defaultSize * 1.2),
+                            ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(

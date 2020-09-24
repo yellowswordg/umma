@@ -35,14 +35,16 @@ class AzkarList extends StatelessWidget {
                       padding: EdgeInsets.all(defaultSize * 1.6),
                       child: Text(
                         azakrList[index].title,
-                        style: Theme.of(context).textTheme.headline1,
+                        style: Theme.of(context).textTheme.headline1.merge(
+                              TextStyle(fontSize: defaultSize * 1.7),
+                            ),
                       ),
                     ),
                     CustomDivider(),
                     Padding(
                       padding: EdgeInsets.all(defaultSize * 1.6),
                       child: Image(
-                        fit: BoxFit.none,
+                        fit: BoxFit.fill,
                         image: AssetImage(
                           azakrList[index].imgUrl,
                         ),
@@ -53,13 +55,18 @@ class AzkarList extends StatelessWidget {
                           defaultSize * 1.6, defaultSize * 1.6),
                       child: Text(
                         azakrList[index].text,
+                        style: TextStyle(
+                          fontSize: defaultSize * 1.5,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(defaultSize * 1.6),
                       child: Text(
                         azakrList[index].translation,
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyText1.merge(
+                              TextStyle(fontSize: defaultSize * 1.5),
+                            ),
                       ),
                     ),
                     CustomDivider(),

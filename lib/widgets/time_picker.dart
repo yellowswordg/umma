@@ -57,7 +57,7 @@ class _TimePickerState extends State<TimePicker> {
                       ? BoxDecoration(
                           border: Border.all(
                               color: Theme.of(context).accentColor, width: 1),
-                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderRadius: BorderRadius.all(Radius.circular(60)),
                         )
                       : null,
                   child: Padding(
